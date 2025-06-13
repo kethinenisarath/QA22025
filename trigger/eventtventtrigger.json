@@ -1,8 +1,8 @@
 {
-	"name": "trigger1",
+	"name": "eventtventtrigger",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
