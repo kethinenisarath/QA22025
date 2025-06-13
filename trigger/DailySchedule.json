@@ -6,7 +6,7 @@
 		"pipelines": [
 			{
 				"pipelineReference": {
-					"referenceName": "pipeline1",
+					"referenceName": "Basic_copy",
 					"type": "PipelineReference"
 				}
 			}
