@@ -1,17 +1,15 @@
 {
-	"name": "DS_SOURCE",
+	"name": "DS_TARGET",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "LS_GEN2_SOURCE",
+			"referenceName": "LS_GEN2_SINK",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation",
-				"fileName": "sample.csv",
-				"fileSystem": "input"
+				"type": "AzureBlobFSLocation"
 			}
 		}
 	}
