@@ -23,7 +23,7 @@
 			"type": "string",
 			"defaultValue": "https://inputsource.dfs.core.windows.net/"
 		},
-		"trigger1_properties_typeProperties_scope": {
+		"eventtventtrigger_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/3d85e5a8-43f9-4242-bf14-b930f1e32b44/resourceGroups/ETL/providers/Microsoft.Storage/storageAccounts/inputsource"
 		}
@@ -206,7 +206,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/trigger1')]",
+			"name": "[concat(parameters('factoryName'), '/eventtventtrigger')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -225,7 +225,7 @@
 				"typeProperties": {
 					"blobPathBeginsWith": "/input/blobs/sarath11",
 					"ignoreEmptyBlobs": true,
-					"scope": "[parameters('trigger1_properties_typeProperties_scope')]",
+					"scope": "[parameters('eventtventtrigger_properties_typeProperties_scope')]",
 					"events": [
 						"Microsoft.Storage.BlobCreated"
 					]

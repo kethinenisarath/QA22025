@@ -23,7 +23,7 @@
 			"type": "string",
 			"defaultValue": "https://inputsource.dfs.core.windows.net/"
 		},
-		"trigger1_properties_typeProperties_scope": {
+		"eventtventtrigger_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/3d85e5a8-43f9-4242-bf14-b930f1e32b44/resourceGroups/ETL/providers/Microsoft.Storage/storageAccounts/inputsource"
 		},
@@ -66,8 +66,8 @@
 					"LS_GEN2_SOURCE_properties_typeProperties_url": {
 						"value": "[parameters('LS_GEN2_SOURCE_properties_typeProperties_url')]"
 					},
-					"trigger1_properties_typeProperties_scope": {
-						"value": "[parameters('trigger1_properties_typeProperties_scope')]"
+					"eventtventtrigger_properties_typeProperties_scope": {
+						"value": "[parameters('eventtventtrigger_properties_typeProperties_scope')]"
 					}
 				}
 			},
