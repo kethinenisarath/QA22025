@@ -12,17 +12,55 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "filename",
+					"variableName": "sourcefilename",
 					"value": [
 						"sarath1",
 						"sarath11",
 						"sarath12"
 					]
 				}
+			},
+			{
+				"name": "ForEach",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Set variable",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@variables('sourcefilename')",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Set variable In For Each",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "sourcefilename",
+								"value": {
+									"value": "@item()",
+									"type": "Expression"
+								}
+							}
+						}
+					]
+				}
 			}
 		],
 		"variables": {
-			"filename": {
+			"sourcefilename": {
 				"type": "Array"
 			}
 		},
