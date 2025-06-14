@@ -1,0 +1,9 @@
+{
+	"name": "sarathetladf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f188583b-7f75-4cdb-b576-637f3d87b883",
+		"tenantId": "b3711152-ab7a-4f8e-81dc-fa0a27b659dc"
+	}
+}
