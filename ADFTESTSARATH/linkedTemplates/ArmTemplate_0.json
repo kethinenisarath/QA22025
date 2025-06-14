@@ -223,7 +223,7 @@
 				],
 				"type": "BlobEventsTrigger",
 				"typeProperties": {
-					"blobPathBeginsWith": "/input/blobs/sarath11",
+					"blobPathBeginsWith": "/input/blobs/input/",
 					"ignoreEmptyBlobs": true,
 					"scope": "[parameters('eventtventtrigger_properties_typeProperties_scope')]",
 					"events": [
