@@ -17,9 +17,6 @@
 		"LS_GEN2_SOURCE_properties_typeProperties_url": {
 			"value": "https://inputsource.dfs.core.windows.net/"
 		},
-		"eventtventtrigger_properties_typeProperties_scope": {
-			"value": "/subscriptions/3d85e5a8-43f9-4242-bf14-b930f1e32b44/resourceGroups/ETL/providers/Microsoft.Storage/storageAccounts/inputsource"
-		},
 		"containerUri": {
 			"value": ""
 		},

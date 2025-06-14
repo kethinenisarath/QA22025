@@ -22,10 +22,6 @@
 		"LS_GEN2_SOURCE_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://inputsource.dfs.core.windows.net/"
-		},
-		"eventtventtrigger_properties_typeProperties_scope": {
-			"type": "string",
-			"defaultValue": "/subscriptions/3d85e5a8-43f9-4242-bf14-b930f1e32b44/resourceGroups/ETL/providers/Microsoft.Storage/storageAccounts/inputsource"
 		}
 	},
 	"variables": {
@@ -172,68 +168,6 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/DS_SOURCE')]",
 				"[concat(variables('factoryId'), '/datasets/DS_TARGET')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/DailySchedule')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Started",
-				"pipelines": [
-					{
-						"pipelineReference": {
-							"referenceName": "Basic_copy",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					}
-				],
-				"type": "ScheduleTrigger",
-				"typeProperties": {
-					"recurrence": {
-						"frequency": "Minute",
-						"interval": 2,
-						"startTime": "2025-06-13T23:40:00",
-						"endTime": "2025-06-14T05:30:00",
-						"timeZone": "India Standard Time"
-					}
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/Basic_copy')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/eventtventtrigger')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Started",
-				"pipelines": [
-					{
-						"pipelineReference": {
-							"referenceName": "Basic_copy",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					}
-				],
-				"type": "BlobEventsTrigger",
-				"typeProperties": {
-					"blobPathBeginsWith": "/input/blobs/input/",
-					"blobPathEndsWith": "input/sarath11.csv",
-					"ignoreEmptyBlobs": true,
-					"scope": "[parameters('eventtventtrigger_properties_typeProperties_scope')]",
-					"events": [
-						"Microsoft.Storage.BlobCreated"
-					]
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/Basic_copy')]"
 			]
 		}
 	]
