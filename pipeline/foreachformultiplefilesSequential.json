@@ -1,5 +1,5 @@
 {
-	"name": "foreachformultiplefiles",
+	"name": "foreachformultiplefilesSequential",
 	"properties": {
 		"activities": [
 			{
