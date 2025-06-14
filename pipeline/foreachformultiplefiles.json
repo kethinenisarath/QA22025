@@ -1,0 +1,31 @@
+{
+	"name": "foreachformultiplefiles",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "filename",
+					"value": [
+						"sarath1",
+						"sarath11",
+						"sarath12"
+					]
+				}
+			}
+		],
+		"variables": {
+			"filename": {
+				"type": "Array"
+			}
+		},
+		"annotations": []
+	}
+}
