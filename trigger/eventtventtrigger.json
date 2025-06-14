@@ -2,7 +2,7 @@
 	"name": "eventtventtrigger",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipelines": [
 			{
 				"pipelineReference": {
@@ -14,6 +14,7 @@
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
 			"blobPathBeginsWith": "/input/blobs/input/",
+			"blobPathEndsWith": "input/sarath11.csv",
 			"ignoreEmptyBlobs": true,
 			"scope": "/subscriptions/3d85e5a8-43f9-4242-bf14-b930f1e32b44/resourceGroups/ETL/providers/Microsoft.Storage/storageAccounts/inputsource",
 			"events": [
