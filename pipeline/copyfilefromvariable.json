@@ -1,0 +1,86 @@
+{
+	"name": "copyfilefromvariable",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy file from variable",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Set variable",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "BinarySource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "BinaryReadSettings"
+						}
+					},
+					"sink": {
+						"type": "BinarySink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "DS_BOB_SOURCE",
+						"type": "DatasetReference",
+						"parameters": {
+							"FILENAME": {
+								"value": "@variables('filenamefromvariable')",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DS_GEN2_SINK",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Set variable",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "filenamefromvariable",
+					"value": "sample.csv"
+				}
+			}
+		],
+		"variables": {
+			"filenamefromvariable": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-06-14T20:01:33Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

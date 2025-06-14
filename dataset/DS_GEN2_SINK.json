@@ -1,0 +1,18 @@
+{
+	"name": "DS_GEN2_SINK",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_GEN2_SINK",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "sink"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

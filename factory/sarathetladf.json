@@ -1,16 +1,9 @@
 {
 	"name": "sarathetladf",
-	"properties": {
-		"globalParameters": {
-			"SourceContainer": {
-				"type": "string",
-				"value": "etlsoure"
-			},
-			"FileName": {
-				"type": "string",
-				"value": "sarath11.csv"
-			}
-		}
-	},
-	"location": "eastus"
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "cc0621a7-edd6-4c71-97bb-3d9c5dfcca8c",
+		"tenantId": "b3711152-ab7a-4f8e-81dc-fa0a27b659dc"
+	}
 }
