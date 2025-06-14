@@ -224,6 +224,7 @@
 				"type": "BlobEventsTrigger",
 				"typeProperties": {
 					"blobPathBeginsWith": "/input/blobs/input/",
+					"blobPathEndsWith": "input/sarath11.csv",
 					"ignoreEmptyBlobs": true,
 					"scope": "[parameters('eventtventtrigger_properties_typeProperties_scope')]",
 					"events": [
