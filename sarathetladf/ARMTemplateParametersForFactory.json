@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "sarathetladf"
+		},
+		"LS_BOB_SOURCE_connectionString": {
+			"value": ""
+		},
+		"LS_GEN2_SINK_accountKey": {
+			"value": ""
+		},
+		"LS_SINK_GOBAL_PARAMATER_accountKey": {
+			"value": ""
+		},
+		"LS_SOURCE_GOBAL_PARAMETERS_accountKey": {
+			"value": ""
+		},
+		"LS_GEN2_SINK_properties_typeProperties_url": {
+			"value": "https://dsgen2sink.dfs.core.windows.net/"
+		},
+		"LS_SINK_GOBAL_PARAMATER_properties_typeProperties_url": {
+			"value": "https://etlsoure.dfs.core.windows.net/"
+		},
+		"LS_SOURCE_GOBAL_PARAMETERS_properties_typeProperties_url": {
+			"value": "https://etlsoure.dfs.core.windows.net/"
+		}
+	}
+}
