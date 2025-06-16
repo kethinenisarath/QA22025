@@ -5,11 +5,20 @@
 			"referenceName": "LS_GEN2_SINK",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"targetfilename": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().targetfilename",
+					"type": "Expression"
+				},
 				"fileSystem": "outbound"
 			},
 			"columnDelimiter": ",",
