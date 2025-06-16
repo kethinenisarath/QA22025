@@ -1,0 +1,31 @@
+{
+	"name": "AzureSqlTableCOPY",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_MSSQL_SOURCE",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SCHEMANAME": {
+				"type": "string"
+			},
+			"TABLENAMEFROMLKP": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().SCHEMANAME",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().TABLENAMEFROMLKP",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

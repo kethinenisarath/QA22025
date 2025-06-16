@@ -1,0 +1,9 @@
+{
+	"name": "ADFETLTESTSARATH",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "29257de9-c58d-4228-a752-0c033c7876ef",
+		"tenantId": "b3711152-ab7a-4f8e-81dc-fa0a27b659dc"
+	}
+}
