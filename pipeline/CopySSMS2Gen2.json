@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "CopySSMS2Gen2",
 	"properties": {
 		"activities": [
 			{
